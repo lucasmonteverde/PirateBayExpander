@@ -1,0 +1,7 @@
+#container{
+	text-align: center;
+	margin-top:10px;
+	/* min-width: 960px;
+	max-width: 1200px; */
+}
+#container img{width:100%;height:auto}
