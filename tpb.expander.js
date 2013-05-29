@@ -55,6 +55,10 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 			"target" :'imagepdb.com/images/$1.jpg'
 		},
 		{
+			"regExp" :/fastpics\.net\/\?v=(.*\S)/i,
+			"target" :'fastpics.net/images/$1'
+		},
+		{
 			"regExp" :/tinypix\.me\/viewer.php\?file=(.*\S)/i,
 			"target" :'tinypix.me/images/$1'
 		},
@@ -63,9 +67,20 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 			"target" :'picrak.com/images/$1'
 		},
 		{
+			"regExp" :/bayimg\.com\/(.*\S)/i,
+			"target" :/(image\.bayimg\.com\/.*?)"/i,
+			"load" : true
+		},
+		{
 			"regExp" :/baypic\.net\/img-(.*)\.html/i,
-			"target" :'baypic.net/dlimg.php?id=$1',
-			"custom" :'baypic'
+			"target" :/(baypic\.net\/upload\/big.*?)'/i, //'baypic.net/dlimg.php?id=$1',
+			"load" : true
+		},
+		{
+			"regExp" :/imagedomino\.com\/\?g=(.*\S)/i,
+			"find" :/imagedomino\.com\/\?v=(.*)'/gi,
+			"target" :'imagedomino.com/images/$1.jpg',
+			"multi" : true
 		},
 	];
 		
@@ -80,8 +95,13 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 			
 			if(item.regExp.test(link)){
 			
-				if( item.custom ){
-					this[item.custom](e.href, item, container);
+				if( item.load ){
+					get(e.href, item, container, load);
+					return;
+				}
+				
+				if( item.multi ){
+					get(e.href, item, container, multi);
 					return;
 				}
 				
@@ -105,17 +125,33 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 }(document));
 
 
-function baypic(url, item, container){
+function get(url, item, container, callback){
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", url, true);
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4) {
-			var result = /(baypic\.net\/upload\/big.*?)'/i.exec(xhr.responseText),
-				image = document.createElement('img');
-			image.src = 'http://' + result[1];
-			
-			container.appendChild(image);
+			callback.apply(this, [xhr, item, container]);
 		}
 	}
 	xhr.send();
+}
+
+function load(xhr, item, container){
+	var result = item.target.exec(xhr.responseText),
+		image = document.createElement('img');
+	image.src = 'http://' + result[1];
+	
+	container.appendChild(image);
+}
+
+function multi(xhr, item, container){
+	var result = xhr.responseText.match(item.find);
+	
+	result.forEach(function(e){
+	
+		var image = document.createElement('img');
+		image.src = 'http://' + e.replace(item.find, item.target );
+	
+		container.appendChild(image);
+	});
 }
