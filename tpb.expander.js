@@ -25,7 +25,7 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 	
 	var links = d.querySelectorAll('.nfo a'),
 		container = d.createElement('div'),
-		html = '',
+		defaultImage = /(http(|s):\/\/.*?(png|jpg|gif))/i,
 		hotlink = 'http://lucasmonteverde.com/dev/hotlink.php?url=';
 		
 	var data = [
@@ -51,8 +51,16 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 			"target" :'pixsor.com/image.php?id=$1'
 		},
 		{
+			"regExp" :/imagepdb\.com\/\?p=(.*\S)/i,
+			"target" :'imagepdb.com/images/$1.jpg'
+		},
+		{
 			"regExp" :/imagepdb\.com\/\?v=(.*\S)/i,
 			"target" :'imagepdb.com/images/$1.jpg'
+		},
+		{
+			"regExp" :/imgsure\.com\/\?v=(.*\S)/i,
+			"target" :'imgsure.com/images/$1.jpg'
 		},
 		{
 			"regExp" :/fastpics\.net\/\?v=(.*\S)/i,
@@ -67,6 +75,10 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 			"target" :'picrak.com/images/$1'
 		},
 		{
+			"regExp" :/seedimage\.com\/X\/viewer.php\?file=(.*\S)/i,
+			"target" :'seedimage.com/X\/images/$1'
+		},
+		{
 			"regExp" :/bayimg\.com\/(.*\S)/i,
 			"target" :/(image\.bayimg\.com\/.*?)"/i,
 			"load" : true
@@ -74,6 +86,21 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		{
 			"regExp" :/baypic\.net\/img-(.*)\.html/i,
 			"target" :/(baypic\.net\/upload\/big.*?)'/i, //'baypic.net/dlimg.php?id=$1',
+			"load" : true
+		},
+		{
+			"regExp" :/picturevip\.com\/x\/clean\/(.*\S)/i,
+			"target" :/(picturevip\.com\/x\/clean\/images\/.*?)"/i,
+			"load" : true
+		},
+		{
+			"regExp" :/picturescream\.com\/x\/clean\/(.*\S)/i,
+			"target" :/(picturescream\.com\/x\/clean\/images\/.*?)"/i,
+			"load" : true
+		},
+		{
+			"regExp" :/picturescream\.asia\/soft\/(.*\S)/i,
+			"target" :/(picturescream\.asia\/soft\/images\/.*?)"/i,
 			"load" : true
 		},
 		{
@@ -87,71 +114,83 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 	container.id = 'container';
 	
 	links.forEach(function(e){
-		var link = e.href;
+		var link = e.href, found = false;
 		
 		data.forEach(function(item){
 			
-			//console.log(link, item.regExp.test(link) );
+			//console.log(link, item, item.regExp.test(link) );
 			
 			if(item.regExp.test(link)){
-			
+				found = true;
+				
 				if( item.load ){
-					get(e.href, item, container, load);
+					get(e.href, item, load);
 					return;
 				}
 				
 				if( item.multi ){
-					get(e.href, item, container, multi);
+					get(e.href, item, multi);
 					return;
 				}
 				
-				var url = e.href.replace(item.regExp, item.target ),
-					image = document.createElement('img');
-				
-				//console.log(url);
-
-				image.src = ( item.hotlink ? hotlink: '') + encodeURI(url);
-				
-				container.appendChild(image);
+				var url = e.href.replace(item.regExp, item.target );
+				appendImage( ( item.hotlink ? hotlink : '') + url );
 			}
 		
 		});
 		
+		if( !found && defaultImage.test(link) ){
+			appendImage( link );
+		}
+		
 	});
 	
-	//container.innerHTML = html;
 	d.querySelectorAll('#content')[0].appendChild( container );
+	
+	function appendImage(url){
+		//console.log(url);
+		
+		var image = document.createElement('img');
+		image.src = encodeURI(url);
+		image.onerror = function(a,b,c){
+			destroy(this);
+		};
+	
+		container.appendChild(image);
+	}
+	
+	function load(data, item){
+		var result = item.target.exec(data);
+		
+		appendImage( 'http://' + result[1] );
+	}
+
+	function multi(xhr, item){
+		var result = data.match(item.find);
+		
+		result.forEach(function(e){
+			appendImage( 'http://' + e.replace(item.find, item.target ) );
+		});
+	}
 
 }(document));
 
 
-function get(url, item, container, callback){
+function get(url, item,  callback){
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", url, true);
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4) {
-			callback.apply(this, [xhr, item, container]);
+			console.log( xhr );
+			callback.apply(this, [xhr.responseText, item]);
 		}
 	}
 	xhr.send();
 }
 
-function load(xhr, item, container){
-	var result = item.target.exec(xhr.responseText),
-		image = document.createElement('img');
-	image.src = 'http://' + result[1];
-	
-	container.appendChild(image);
-}
-
-function multi(xhr, item, container){
-	var result = xhr.responseText.match(item.find);
-	
-	result.forEach(function(e){
-	
-		var image = document.createElement('img');
-		image.src = 'http://' + e.replace(item.find, item.target );
-	
-		container.appendChild(image);
-	});
+function destroy(obj){
+	if(obj){
+		obj.parentNode.removeChild(obj);
+		return true;
+	}else return false;
 }
