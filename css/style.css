@@ -1,0 +1,17 @@
+#container{
+	text-align: center;
+	margin-top:10px;
+	/* min-width: 960px;
+	max-width: 1200px; */
+}
+#container img{width:100%;height:auto}
+
+
+
+.cov{display:inline-block;width:16px;height:16px;font-size:0;text-indent:-9999em;vertical-align:top;}
+.cov{background:transparent url("chrome-extension://__MSG_@@extension_id__/img/ico/cov.gif") center center no-repeat;}
+
+.cov{position:relative;}
+.cov span{width:215px;height:auto;position:absolute;top:0;left:18px;z-index:1;display:none;}
+.cov span img{width:100%;}
+.cov:hover span{display:block;}

@@ -13,8 +13,17 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.thepiratebay.sx/torrent/*"],
-			"js": ["tpb.expander.js"],
-			"css": ["style.css"]
+			"js": ["data.js", "tpb.expander.js"],
+			"css": ["css/style.css"]
+		},
+		{
+			"matches": ["*://*.thepiratebay.sx/*"],
+			"js": ["tpb.helper.js"],
+			"css": ["css/style.css"]
 		}
+	],
+	
+	"web_accessible_resources": [
+		"img/ico/cov.gif"
 	]
 }

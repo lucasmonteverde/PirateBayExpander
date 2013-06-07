@@ -28,89 +28,6 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		defaultImage = /(http(|s):\/\/.*?(png|jpg|gif))/i,
 		hotlink = 'http://lucasmonteverde.com/dev/hotlink.php?url=';
 		
-	var data = [
-		{
-			"regExp" :/xxxhost\.me\/viewer.php\?file=(.*\S)/i,
-			"target" :'xxxhost.me/files/$1',
-			"hotlink" : true
-		},
-		{
-			"regExp" :/euro-pic\.eu\/share-(.*)\.html/i,
-			"target" :'euro-pic.eu/image.php?id=$1'
-		},
-		{
-			"regExp" :/imgnip\.com\/viewer\.php\?file=(.*\S)/i,
-			"target" :'imgnip.com/images/$1'
-		},
-		{
-			"regExp" :/picbank\.asia\/viewer\.php\?file=(.*\S)/i,
-			"target" :'picbank.asia/images/$1'
-		},
-		{
-			"regExp" :/pixsor\.com\/share-(.*)\.html/i,
-			"target" :'pixsor.com/image.php?id=$1'
-		},
-		{
-			"regExp" :/imagepdb\.com\/\?p=(.*\S)/i,
-			"target" :'imagepdb.com/images/$1.jpg'
-		},
-		{
-			"regExp" :/imagepdb\.com\/\?v=(.*\S)/i,
-			"target" :'imagepdb.com/images/$1.jpg'
-		},
-		{
-			"regExp" :/imgsure\.com\/\?v=(.*\S)/i,
-			"target" :'imgsure.com/images/$1.jpg'
-		},
-		{
-			"regExp" :/fastpics\.net\/\?v=(.*\S)/i,
-			"target" :'fastpics.net/images/$1'
-		},
-		{
-			"regExp" :/tinypix\.me\/viewer.php\?file=(.*\S)/i,
-			"target" :'tinypix.me/images/$1'
-		},
-		{
-			"regExp" :/picrak\.com\/viewer.php\?file=(.*\S)/i,
-			"target" :'picrak.com/images/$1'
-		},
-		{
-			"regExp" :/seedimage\.com\/X\/viewer.php\?file=(.*\S)/i,
-			"target" :'seedimage.com/X\/images/$1'
-		},
-		{
-			"regExp" :/bayimg\.com\/(.*\S)/i,
-			"target" :/(image\.bayimg\.com\/.*?)"/i,
-			"load" : true
-		},
-		{
-			"regExp" :/baypic\.net\/img-(.*)\.html/i,
-			"target" :/(baypic\.net\/upload\/big.*?)'/i, //'baypic.net/dlimg.php?id=$1',
-			"load" : true
-		},
-		{
-			"regExp" :/picturevip\.com\/x\/clean\/(.*\S)/i,
-			"target" :/(picturevip\.com\/x\/clean\/images\/.*?)"/i,
-			"load" : true
-		},
-		{
-			"regExp" :/picturescream\.com\/x\/clean\/(.*\S)/i,
-			"target" :/(picturescream\.com\/x\/clean\/images\/.*?)"/i,
-			"load" : true
-		},
-		{
-			"regExp" :/picturescream\.asia\/soft\/(.*\S)/i,
-			"target" :/(picturescream\.asia\/soft\/images\/.*?)"/i,
-			"load" : true
-		},
-		{
-			"regExp" :/imagedomino\.com\/\?g=(.*\S)/i,
-			"find" :/imagedomino\.com\/\?v=(.*)'/gi,
-			"target" :'imagedomino.com/images/$1.jpg',
-			"multi" : true
-		},
-	];
-		
 	container.id = 'container';
 	
 	links.forEach(function(e){
@@ -124,12 +41,12 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 				found = true;
 				
 				if( item.load ){
-					get(e.href, item, load);
+					load(e.href, item);
 					return;
 				}
 				
 				if( item.multi ){
-					get(e.href, item, multi);
+					multi(e.href, item);
 					return;
 				}
 				
@@ -159,38 +76,43 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		container.appendChild(image);
 	}
 	
-	function load(data, item){
-		var result = item.target.exec(data);
-		
-		appendImage( 'http://' + result[1] );
-	}
-
-	function multi(xhr, item){
-		var result = data.match(item.find);
-		
-		result.forEach(function(e){
-			appendImage( 'http://' + e.replace(item.find, item.target ) );
+	function load(url, item){
+		get(url, function(data){
+			var result = item.target.exec(data);
+			
+			appendImage( 'http://' + result[1] );
 		});
 	}
 
-}(document));
-
-
-function get(url, item,  callback){
-	var xhr = new XMLHttpRequest();
-	xhr.open("GET", url, true);
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState == 4) {
-			console.log( xhr );
-			callback.apply(this, [xhr.responseText, item]);
-		}
+	function multi(url, item){
+		get(url, function(data){
+		
+			var result = data.match(item.find);
+		
+			result.forEach(function(e){
+				appendImage( 'http://' + e.replace(item.find, item.target ) );
+			});
+		
+		});
 	}
-	xhr.send();
-}
+	
+	function get(url, callback){
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == 4) {
+				console.log( xhr );
+				callback.apply(this, [xhr.responseText, xhr]);
+			}
+		}
+		xhr.send();
+	}
 
-function destroy(obj){
-	if(obj){
-		obj.parentNode.removeChild(obj);
-		return true;
-	}else return false;
-}
+	function destroy(obj){
+		if(obj){
+			obj.parentNode.removeChild(obj);
+			return true;
+		}else return false;
+	}
+
+}(document));
