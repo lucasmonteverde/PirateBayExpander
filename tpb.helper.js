@@ -25,8 +25,6 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 	
 	var results = d.querySelectorAll('#searchResult tr:not(.header)');
 	
-	console.log(results);
-	
 	if( !results || results.length < 1) return;
 	
 	var header = d.querySelector('#searchResult tr.header'),
@@ -51,11 +49,11 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		imdb.innerHTML = '';
 		
 		//run only for movies;
-		if( !/movies/i.test(category) || /porn/i.test(category) ){
+		if( ( !/movies/i.test(category) && !/filmes/i.test(category) ) || /porn/i.test(category) ){
 			return;
 		}
 	
-		console.log( title );
+		
 	
 		var params = {
 			title: sanitizeTitle( title )
@@ -64,7 +62,13 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 			//episode:
 		};
 		
-		var url = encodeURI( api + serialize(params) );
+		if(params.title == ''){
+			return;
+		}
+		
+		console.log( title,params.title  );
+		
+		var url = api + serialize(params);
 		
 		
 		get( url, function(data){
@@ -109,7 +113,7 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		var result = title.match(/(.*)?2013/i);
 		
 		//console.log( result );
-		return result ? result[1].replace(['.',' '],'+').trim() : '';
+		return result ? result[1].replace(/\s|\.|\(|\)/ig,'+').trim() : '';
 	}
 
 	function destroy(obj){
