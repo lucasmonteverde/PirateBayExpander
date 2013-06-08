@@ -22,14 +22,14 @@
                     	<fieldset>
                         	<div>
                         		<input type="search" value="" placeholder="Search here..." />
-                                <div class="btn">
+                                <div class="btn search">
                                 	<input type="submit" value="Search" />
                                 </div>
                             </div>
                             
                             <div>
-                            	<a href="#" title="Advanced search">Advanced search</a>
-                                <div>
+                            	<a href="#" id="btnAdSearch" title="Advanced search">Advanced search</a>
+                                <div id="boxAdSearch">
                                     <label title="All"><input type="checkbox" class="custom" checked>All</label>
                                     <label title="Audio"><input name="audio" type="checkbox"  class="custom">Audio</label>
                                     <label title="Video"><input name="video" type="checkbox"  class="custom">Video</label>
@@ -137,11 +137,6 @@
                         <li><a href="https://twitter.com/tpbdotorg" title="Twitter" target="_blank">Follow TPB on Twitter</a></li>
                         <li><a href="https://www.facebook.com/ThePirateBayWarMachine" title="Facebook" target="_blank">Follow TPB on Facebook</a></li>
                     </ul>
-                    <p>
-                    	6.270.744 registered users.<br />
-                        Last updated 03:10:05.<br />
-                        27.256.022 peers (20.341.327 seeders + 6.914.695 leechers) in 4.506.718 torrents.
-                    </p>
                 </footer>
             </aside>
             
@@ -149,1079 +144,1092 @@
             <section>
             	<article>
                     <table>
-                    	<tr class="thead">
-                            <td><a href="#">Type</a></td>
-                            <td>&nbsp;</td>
-                            <td><a href="#">Name</a></td>
-                            <td><a href="#">Uploaded</a></td>
-                            <td>&nbsp;</td>
-                            <td><a href="#">IMDB Ratings</a></td>
-                            <td><a href="#">Size</a></td>
-                            <td><a href="#">Se</a></td>
-                            <td><a href="#">Le</a></td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td><b>33&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>894.34&nbsp;MiB</td>
-                            <td>4</td>
-                            <td>59</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
-                            <td>Today&nbsp;03:06</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.18&nbsp;GiB</td>
-                            <td>9</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;02:59</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>571.41&nbsp;MiB</td>
-                            <td>25</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;01:57</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>906.67&nbsp;MiB</td>
-                            <td>28</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:29</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.07&nbsp;GiB</td>
-                            <td>23</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:26</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>845.79&nbsp;MiB</td>
-                            <td>11</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
-                            <td>Y-day&nbsp;20:21</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.01&nbsp;GiB</td>
-                            <td>288</td>
-                            <td>754</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:18</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.61&nbsp;GiB</td>
-                            <td>115</td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:02</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.32&nbsp;GiB</td>
-                            <td>34</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
-                            <td>Y-day&nbsp;19:30</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.7&nbsp;GiB</td>
-                            <td>96</td>
-                            <td>134</td>
-                        </tr>
-                        
-                        <!-- TEMP -->
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td><b>33&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>894.34&nbsp;MiB</td>
-                            <td>4</td>
-                            <td>59</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
-                            <td>Today&nbsp;03:06</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.18&nbsp;GiB</td>
-                            <td>9</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;02:59</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>571.41&nbsp;MiB</td>
-                            <td>25</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;01:57</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>906.67&nbsp;MiB</td>
-                            <td>28</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:29</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.07&nbsp;GiB</td>
-                            <td>23</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:26</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>845.79&nbsp;MiB</td>
-                            <td>11</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
-                            <td>Y-day&nbsp;20:21</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.01&nbsp;GiB</td>
-                            <td>288</td>
-                            <td>754</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:18</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.61&nbsp;GiB</td>
-                            <td>115</td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:02</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.32&nbsp;GiB</td>
-                            <td>34</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
-                            <td>Y-day&nbsp;19:30</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.7&nbsp;GiB</td>
-                            <td>96</td>
-                            <td>134</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td><b>33&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>894.34&nbsp;MiB</td>
-                            <td>4</td>
-                            <td>59</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
-                            <td>Today&nbsp;03:06</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.18&nbsp;GiB</td>
-                            <td>9</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;02:59</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>571.41&nbsp;MiB</td>
-                            <td>25</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;01:57</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>906.67&nbsp;MiB</td>
-                            <td>28</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:29</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.07&nbsp;GiB</td>
-                            <td>23</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:26</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>845.79&nbsp;MiB</td>
-                            <td>11</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
-                            <td>Y-day&nbsp;20:21</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.01&nbsp;GiB</td>
-                            <td>288</td>
-                            <td>754</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:18</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.61&nbsp;GiB</td>
-                            <td>115</td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:02</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.32&nbsp;GiB</td>
-                            <td>34</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
-                            <td>Y-day&nbsp;19:30</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.7&nbsp;GiB</td>
-                            <td>96</td>
-                            <td>134</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td><b>33&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>894.34&nbsp;MiB</td>
-                            <td>4</td>
-                            <td>59</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
-                            <td>Today&nbsp;03:06</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.18&nbsp;GiB</td>
-                            <td>9</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;02:59</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>571.41&nbsp;MiB</td>
-                            <td>25</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;01:57</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>906.67&nbsp;MiB</td>
-                            <td>28</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:29</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.07&nbsp;GiB</td>
-                            <td>23</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:26</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>845.79&nbsp;MiB</td>
-                            <td>11</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
-                            <td>Y-day&nbsp;20:21</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.01&nbsp;GiB</td>
-                            <td>288</td>
-                            <td>754</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:18</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.61&nbsp;GiB</td>
-                            <td>115</td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:02</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.32&nbsp;GiB</td>
-                            <td>34</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
-                            <td>Y-day&nbsp;19:30</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.7&nbsp;GiB</td>
-                            <td>96</td>
-                            <td>134</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td><b>33&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>894.34&nbsp;MiB</td>
-                            <td>4</td>
-                            <td>59</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
-                            <td>Today&nbsp;03:06</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.18&nbsp;GiB</td>
-                            <td>9</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;02:59</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>571.41&nbsp;MiB</td>
-                            <td>25</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;01:57</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>906.67&nbsp;MiB</td>
-                            <td>28</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:29</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.07&nbsp;GiB</td>
-                            <td>23</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:26</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>845.79&nbsp;MiB</td>
-                            <td>11</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
-                            <td>Y-day&nbsp;20:21</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.01&nbsp;GiB</td>
-                            <td>288</td>
-                            <td>754</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:18</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.61&nbsp;GiB</td>
-                            <td>115</td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:02</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.32&nbsp;GiB</td>
-                            <td>34</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
-                            <td>Y-day&nbsp;19:30</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.7&nbsp;GiB</td>
-                            <td>96</td>
-                            <td>134</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td><b>33&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>894.34&nbsp;MiB</td>
-                            <td>4</td>
-                            <td>59</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
-                            <td>Today&nbsp;03:06</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.18&nbsp;GiB</td>
-                            <td>9</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;02:59</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>571.41&nbsp;MiB</td>
-                            <td>25</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
-                            <td>Today&nbsp;01:57</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>906.67&nbsp;MiB</td>
-                            <td>28</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:29</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.07&nbsp;GiB</td>
-                            <td>23</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
-                            <td>Y-day&nbsp;21:26</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>845.79&nbsp;MiB</td>
-                            <td>11</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
-                            <td>Y-day&nbsp;20:21</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.01&nbsp;GiB</td>
-                            <td>288</td>
-                            <td>754</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:18</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.61&nbsp;GiB</td>
-                            <td>115</td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
-                            <td>Y-day&nbsp;20:02</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.32&nbsp;GiB</td>
-                            <td>34</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
-                            <td>Y-day&nbsp;19:30</td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="com">comments</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.7&nbsp;GiB</td>
-                            <td>96</td>
-                            <td>134</td>
-                        </tr>
-                        <!-- TEMP -->
-                        
-                        <!-- GRUPO DE TORRENT -->
-                        <tr class="thead">
-                            <td colspan="100%">Hit.The.Floor.720p.HDTV.x264-KILLERS [PublicHD]</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E01.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>2.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E03.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.10&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
-                        <tr>
-                            <td><a href="#">TV shows</a></td>
-							<td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
-                            <td><a href="#">Hit.The.Floor.S01E04.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
-                            <td><b>12&nbsp;mins&nbsp;ago</b></td>
-                            <td>
-                                <a href="#" class="mag">magnet</a>
-								<span class="scr">screen</span>
-                                <a href="#" class="dow">download</a>
-                                <a href="#" class="vip">vip</a>
-                            </td>
-                            <td><span class="rat">9.9</span></td>
-                            <td>1.23&nbsp;GiB</td>
-                            <td>0</td>
-                            <td>0</td>
-						</tr>
+                    	<thead>
+                            <tr>
+                                <th colspan="100%">Top 100</th>
+                            </tr>
+                            <tr>
+                                <th><a href="#">Type</a></th>
+                                <th>&nbsp;</td>
+                                <th><a href="#">Name</a></th>
+                                <th><a href="#">Uploaded</a></th>
+                                <th>&nbsp;</td>
+                                <th><a href="#">Ratings</a></th>
+                                <th><a href="#">Size</a></th>
+                                <th><a href="#">Se</a></th>
+                                <th><a href="#">Le</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td><b>33&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>894.34&nbsp;MiB</td>
+                                <td>4</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
+                                <td>Today&nbsp;03:06</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.18&nbsp;GiB</td>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;02:59</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>571.41&nbsp;MiB</td>
+                                <td>25</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;01:57</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>906.67&nbsp;MiB</td>
+                                <td>28</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:29</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.07&nbsp;GiB</td>
+                                <td>23</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:26</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>845.79&nbsp;MiB</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
+                                <td>Y-day&nbsp;20:21</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.01&nbsp;GiB</td>
+                                <td>288</td>
+                                <td>754</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:18</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.61&nbsp;GiB</td>
+                                <td>115</td>
+                                <td>221</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:02</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.32&nbsp;GiB</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
+                                <td>Y-day&nbsp;19:30</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.7&nbsp;GiB</td>
+                                <td>96</td>
+                                <td>134</td>
+                            </tr>
+                            
+                            <!-- TEMP -->
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td><b>33&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>894.34&nbsp;MiB</td>
+                                <td>4</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
+                                <td>Today&nbsp;03:06</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.18&nbsp;GiB</td>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;02:59</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>571.41&nbsp;MiB</td>
+                                <td>25</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;01:57</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>906.67&nbsp;MiB</td>
+                                <td>28</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:29</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.07&nbsp;GiB</td>
+                                <td>23</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:26</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>845.79&nbsp;MiB</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
+                                <td>Y-day&nbsp;20:21</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.01&nbsp;GiB</td>
+                                <td>288</td>
+                                <td>754</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:18</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.61&nbsp;GiB</td>
+                                <td>115</td>
+                                <td>221</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:02</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.32&nbsp;GiB</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
+                                <td>Y-day&nbsp;19:30</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.7&nbsp;GiB</td>
+                                <td>96</td>
+                                <td>134</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td><b>33&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>894.34&nbsp;MiB</td>
+                                <td>4</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
+                                <td>Today&nbsp;03:06</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.18&nbsp;GiB</td>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;02:59</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>571.41&nbsp;MiB</td>
+                                <td>25</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;01:57</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>906.67&nbsp;MiB</td>
+                                <td>28</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:29</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.07&nbsp;GiB</td>
+                                <td>23</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:26</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>845.79&nbsp;MiB</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
+                                <td>Y-day&nbsp;20:21</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.01&nbsp;GiB</td>
+                                <td>288</td>
+                                <td>754</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:18</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.61&nbsp;GiB</td>
+                                <td>115</td>
+                                <td>221</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:02</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.32&nbsp;GiB</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
+                                <td>Y-day&nbsp;19:30</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.7&nbsp;GiB</td>
+                                <td>96</td>
+                                <td>134</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td><b>33&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>894.34&nbsp;MiB</td>
+                                <td>4</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
+                                <td>Today&nbsp;03:06</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.18&nbsp;GiB</td>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;02:59</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>571.41&nbsp;MiB</td>
+                                <td>25</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;01:57</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>906.67&nbsp;MiB</td>
+                                <td>28</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:29</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.07&nbsp;GiB</td>
+                                <td>23</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:26</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>845.79&nbsp;MiB</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
+                                <td>Y-day&nbsp;20:21</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.01&nbsp;GiB</td>
+                                <td>288</td>
+                                <td>754</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:18</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.61&nbsp;GiB</td>
+                                <td>115</td>
+                                <td>221</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:02</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.32&nbsp;GiB</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
+                                <td>Y-day&nbsp;19:30</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.7&nbsp;GiB</td>
+                                <td>96</td>
+                                <td>134</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td><b>33&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>894.34&nbsp;MiB</td>
+                                <td>4</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
+                                <td>Today&nbsp;03:06</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.18&nbsp;GiB</td>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;02:59</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>571.41&nbsp;MiB</td>
+                                <td>25</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;01:57</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>906.67&nbsp;MiB</td>
+                                <td>28</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:29</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.07&nbsp;GiB</td>
+                                <td>23</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:26</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>845.79&nbsp;MiB</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
+                                <td>Y-day&nbsp;20:21</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.01&nbsp;GiB</td>
+                                <td>288</td>
+                                <td>754</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:18</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.61&nbsp;GiB</td>
+                                <td>115</td>
+                                <td>221</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:02</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.32&nbsp;GiB</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
+                                <td>Y-day&nbsp;19:30</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.7&nbsp;GiB</td>
+                                <td>96</td>
+                                <td>134</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Anger.Management.S02E21.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td><b>33&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>894.34&nbsp;MiB</td>
+                                <td>4</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Secret.Life.of.the.American.Teenager.S05E24.720p.HDTV.x264-K</a></td>
+                                <td>Today&nbsp;03:06</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.18&nbsp;GiB</td>
+                                <td>9</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Goodwin.Games.S01E03.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;02:59</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>571.41&nbsp;MiB</td>
+                                <td>25</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Mistresses.US.S01E01.720p.HDTV.X264-DIMENSION [PublicHD]</a></td>
+                                <td>Today&nbsp;01:57</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>906.67&nbsp;MiB</td>
+                                <td>28</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.1080p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:29</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.07&nbsp;GiB</td>
+                                <td>23</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Veep.S02E07.Shutdown.720p.WEB-DL.h.264.DD5.1-NTb [PublicHD]</a></td>
+                                <td>Y-day&nbsp;21:26</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>845.79&nbsp;MiB</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.1080p.WEB-D</a></td>
+                                <td>Y-day&nbsp;20:21</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.01&nbsp;GiB</td>
+                                <td>288</td>
+                                <td>754</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Game.of.Thrones.S03E09.REPACK.The.Rains.of.Castamere.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:18</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.61&nbsp;GiB</td>
+                                <td>115</td>
+                                <td>221</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">The.Venture.Bros.S05E01.What.Color.Is.Your.Cleansuit.720p.WEB-DL</a></td>
+                                <td>Y-day&nbsp;20:02</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.32&nbsp;GiB</td>
+                                <td>34</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Continuum.S02E06.Second.Truths.1080p.WEB-DL.AAC2.0.H264 [PublicH</a></td>
+                                <td>Y-day&nbsp;19:30</td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="com">comments</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.7&nbsp;GiB</td>
+                                <td>96</td>
+                                <td>134</td>
+                            </tr>
+                            <!-- TEMP -->
+                            
+                            <!-- GRUPO DE TORRENT -->
+                            <tr class="group">
+                                <td colspan="100%">Hit.The.Floor.720p.HDTV.x264-KILLERS [PublicHD]</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E01.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>2.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E02.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E03.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.10&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">TV shows</a></td>
+                                <td><a href="#" class="cov"><span><img src="upload/cover.jpg" alt="" /></span></a></td>
+                                <td><a href="#">Hit.The.Floor.S01E04.720p.HDTV.x264-KILLERS [PublicHD]</a></td>
+                                <td><b>12&nbsp;mins&nbsp;ago</b></td>
+                                <td>
+                                    <a href="#" class="mag">magnet</a>
+                                    <span class="scr">screen</span>
+                                    <a href="#" class="dow">download</a>
+                                    <a href="#" class="vip">vip</a>
+                                </td>
+                                <td><span class="rat">9.9</span></td>
+                                <td>1.23&nbsp;GiB</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                    	</tbody>
+                        <tfoot>
+                        	<tr>
+                            	<td colspan="100%">
+                                6.270.744 registered users. Last updated 03:10:05. 27.256.022 peers (20.341.327 seeders + 6.914.695 leechers) in 4.506.718 torrents.</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </article>
                 

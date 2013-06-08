@@ -19,11 +19,14 @@ body{font-size:12px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;col
 a{color:#5b5b5b;}
 a:hover{text-decoration:none;}
 
+
+.search{background-image:url("../img/ico/search.png");}
+
 /*# BTN BASE ##############################################################################################################*/
-.btn{display:inline-block;width:auto;height:auto;font-size:0px;border:#225889 1px solid;border-bottom-color:#164f83;background:#3874ac;cursor:pointer;
--webkit-border-radius:4px;
--moz-border-radius:4px;
-border-radius:4px;}
+.btn{display:inline-block;width:auto;height:auto;font-size:0px;border:#225889 1px solid;border-bottom-color:#164f83;background-color:#3874ac;cursor:pointer;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;}
 .btn a, 
 .btn input{display:block;width:auto;height:28px;line-height:30px;margin:0;padding:0 15px;border:none;color:#fff;font-size:11px;font-family:inherit;font-weight:normal;letter-spacing:0px;background-color:transparent;cursor:pointer;text-decoration:none!important;overflow:visible!important;text-transform:uppercase;}
 .btn:hover{background-color:#276094;
@@ -43,21 +46,18 @@ input[type='password'],
 input[type='checkbox'],
 input[type='radio'],
 select,
-textarea{margin:0;padding:0 10px;border:#c6c6c6 1px solid;border-top-color:#949494;font-size:12px;color:#444;background-color:#fff;
--webkit-border-radius:4px;
--moz-border-radius:4px;
-border-radius:4px;}
+textarea{margin:0;padding:6.5px 10px;border:#c6c6c6 1px solid;border-top-color:#949494;font-size:12px;color:#444;background-color:#fff;vertical-align:top;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;}
 input[type='text'],
 input[type='search'],
 input[type='url'],
-input[type='password'],
-input[type='checkbox'],
-input[type='radio']{height:28px;line-height:28px;}
+input[type='password']{/*height:28px;line-height:28px;*/}
 
 input:focus,
 select:focus,
 textarea:focus{outline:none;}
-
 
 .maskselect,
 .maskcheckbox,
@@ -101,7 +101,7 @@ main{}
 
 
 /*# ASIDE ##############################################################################################################*/
-aside{width:300px;height:100%;padding:0 20px;position:fixed;top:0;left:0;background-color:#fff;
+aside{width:300px;height:100%;padding:0 10px;position:fixed;top:0;left:0;background-color:#fff;
 -webkit-box-shadow:0px 0px 10px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:0px 0px 10px rgba(50, 50, 50, 0.75);
 box-shadow:0px 0px 10px rgba(50, 50, 50, 0.75);}
@@ -109,19 +109,22 @@ box-shadow:0px 0px 10px rgba(50, 50, 50, 0.75);}
 
 	/*# HEADER #*/
 	header{}
-		
-		
-		h1{height:160px;margin:0;text-align:center;}
+		h1{height:150px;margin:10px 0;text-align:center;}
 		h1 img{width:auto;height:100%;}
-	
-		
-	
 		form{}
 			fieldset{}
-			
-				.maskselect{border:#c6c6c6 1px solid;border-top-color:#949494;font-size:12px;color:#444;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+			fieldset>div{font-size:0;}
+			fieldset label{float:left;height:15px;margin:5px 10px 0 0;font-size:12px;vertical-align:top;}
+			fieldset input[type='search']{width:242px;margin-right:5px;}
+			fieldset a{font-size:10px;}
+			fieldset .btn{}
+			fieldset .btn input{width:28px;height:28px;margin:0;padding:0;background-position:center center;background-repeat:no-repeat;text-indent:-9999em;}
+				.maskcheckbox{margin-right:5px;font-size:0;}
+				.maskselect{margin-top:5px;border:#c6c6c6 1px solid;border-top-color:#949494;font-size:12px;color:#444;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
 				.maskselect .text{width:250px;padding:0 10px;height:28px;line-height:28px;}
 				.maskselect .btn{width:28px;height:28px;border:none;}
+				
+				#boxAdSearch{display:none;}
 				
 	header section{margin:0;}
 	header section h2{margin-bottom:0;}
@@ -129,7 +132,7 @@ box-shadow:0px 0px 10px rgba(50, 50, 50, 0.75);}
 	header section p{margin:0;}
 	
 	/*# FOOTER #*/
-	footer{width:300px;font-size:0.9em;color:#666;position:absolute;bottom:0;left:20px;}
+	footer{width:300px;font-size:0.9em;color:#666;position:absolute;bottom:10px;left:10px;}
 	footer p{}
 	footer ul{list-style:none;margin:0;padding:0;}
 	footer li{display:inline-block;}
@@ -138,12 +141,25 @@ box-shadow:0px 0px 10px rgba(50, 50, 50, 0.75);}
 
 	
 /*# SECTION ##############################################################################################################*/
-section{margin-left:340px;}
+section{margin-left:320px;}
 
 	/*# ARTICLE #*/
 	article{}
 	
-		table{width:100%;}
+		table{width:100%; text-align:left;}
+		
+		thead,		
+		tfoot,
+		.group{font-weight:bold;background-color:#ccc;}
+		
+		thead th,		
+		tfoot td{padding:5px;}
+		thead tr:first-child{font-size:14px;}
+		
+		thead tr,		
+		tfoot tr,
+		.group tr{background-color:transparent!important;}
+		
 			tr{border-top:#c6c6c6 1px solid;}
 			tr:first-child{border-top:none;}
 			tr:hover{background-color:#c6c6c6;
