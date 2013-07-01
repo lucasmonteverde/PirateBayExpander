@@ -49,6 +49,11 @@ var data = [
 		"target" :'seedimage.com/X\/images/$1'
 	},
 	{
+		"regExp" :/imagecurl\.org\/viewer.php\?file=(.*\S)/i,
+		"target" :'imagecurl.org/images/$1',
+		"hotlink" : true
+	},
+	{
 		"regExp" :/bayimg\.com\/(.*\S)/i,
 		"target" :/(image\.bayimg\.com\/.*?)"/i,
 		"load" : true
@@ -71,6 +76,11 @@ var data = [
 	{
 		"regExp" :/picturescream\.asia\/soft\/(.*\S)/i,
 		"target" :/(picturescream\.asia\/soft\/images\/.*?)"/i,
+		"load" : true
+	},
+	{
+		"regExp" :/mypornimage\.com\/adultimage\/(.*\S)/i,
+		"target" :/(mypornimage\.com\/images\/.*?)"/i,
 		"load" : true
 	},
 	{
