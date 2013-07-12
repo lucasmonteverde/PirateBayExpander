@@ -14,7 +14,8 @@
 		{
 			"matches": ["*://*.thepiratebay.sx/torrent/*"],
 			"js": ["data.js", "tpb.expander.js"],
-			"css": ["css/style.css"]
+			"css": ["css/style.css"],
+			"run_at": "document_end"
 		},
 		{
 			"matches": ["*://*.thepiratebay.sx/*"],

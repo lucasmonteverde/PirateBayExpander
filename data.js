@@ -10,7 +10,8 @@ var data = [
 	},
 	{
 		"regExp" :/imgnip\.com\/viewer\.php\?file=(.*\S)/i,
-		"target" :'imgnip.com/images/$1'
+		"target" :'imgnip.com/images/$1',
+		"hotlink" : true
 	},
 	{
 		"regExp" :/picbank\.asia\/viewer\.php\?file=(.*\S)/i,
@@ -47,6 +48,14 @@ var data = [
 	{
 		"regExp" :/seedimage\.com\/X\/viewer.php\?file=(.*\S)/i,
 		"target" :'seedimage.com/X\/images/$1'
+	},
+	{
+		"regExp" :/imageview\.me\/viewer.php\?file=(.*\S)/i,
+		"target" :'imageview.me/images/$1'
+	},
+	{
+		"regExp" :/244pix\.com\/viewer.php\?file=(.*\S)/i,
+		"target" :'244pix.com/images/$1'
 	},
 	{
 		"regExp" :/imagecurl\.org\/viewer.php\?file=(.*\S)/i,
