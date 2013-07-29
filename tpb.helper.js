@@ -59,9 +59,14 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 		searchform: '',
 	};
 	
-	templateData.footer = document.querySelector('#footer').innerHTML;
+	try{
+		templateData.footer = document.querySelector('#footer').innerHTML;
 	
-	templateData.title = document.querySelector('h2').innerText;
+		templateData.title = document.querySelector('h2').innerText;
+	
+	}catch(e){
+		console.error('QuerySelector error:', e);
+	}
 	
 	var searchForm = d.querySelectorAll('form input[type="hidden"]');
 	
