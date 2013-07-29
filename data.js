@@ -5,6 +5,11 @@ var data = [
 		"hotlink" : true
 	},
 	{
+		"regExp" :/xxxces\.com\/viewer.php\?file=(.*\S)/i,
+		"target" :'xxxces.com/files/$1',
+		"hotlink" : true
+	},
+	{
 		"regExp" :/euro-pic\.eu\/share-(.*)\.html/i,
 		"target" :'euro-pic.eu/image.php?id=$1'
 	},
@@ -85,6 +90,11 @@ var data = [
 	{
 		"regExp" :/picturescream\.asia\/soft\/(.*\S)/i,
 		"target" :/(picturescream\.asia\/soft\/images\/.*?)"/i,
+		"load" : true
+	},
+	{
+		"regExp" :/imagescream\.com\/img\/soft\/(.*\S)/i,
+		"target" :/(imagescream\.com\/img\/soft\/images\/.*?)"/i,
 		"load" : true
 	},
 	{

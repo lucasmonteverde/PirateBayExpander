@@ -21,7 +21,188 @@
 
 NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.forEach;
 
+HTMLElement.prototype.remove = function(){
+	try{
+		this.parentNode.removeChild(this);
+	}catch(e){
+		console.error('Remove error:', e);
+	}
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
+	this.forEach(function(self){
+		self.remove();
+	})
+};
+
 (function(d){
+	
+	d.querySelectorAll('link[rel="stylesheet"], style', 'head').remove();
+	
+	/* $(document).on('click', '#btnAdSearch',function(){
+		$(this).data('clicked',!$(this).data('clicked'));
+			if ($(this).data('clicked')){
+				$('#boxAdSearch').slideToggle('slow', function() {
+					// Animation complete.
+				});
+			}else{
+				$('#boxAdSearch').slideToggle('fast', function() {
+					// Animation complete.
+				});
+			}
+    }); */
+	
+	var templateData = {
+		categories : [],
+		links: [],
+		items: [],
+		searchform: '',
+	};
+	
+	templateData.footer = document.querySelector('#footer').innerHTML;
+	
+	templateData.title = document.querySelector('h2').innerText;
+	
+	var searchForm = d.querySelectorAll('form input[type="hidden"]');
+	
+	searchForm.forEach(function(self){
+		templateData.searchform += self.outerHTML;
+	});
+	
+	var categories = d.querySelectorAll('#category optgroup');
+
+	categories.forEach(function(self){
+		var cat = {
+			name : self.label,
+			value : self.children[0].value - 1,
+			link: function() {
+				return '/top/' + this.value;
+			},
+			link2:  function() {
+				return '/top/48h' + this.value;
+			},
+			subcategories: _.map(self.children,function(self, index){
+				return {
+					name: self.text,
+					value: self.value,
+					link: function() {
+						return '/top/' + this.value;
+					},
+					link2:  function() {
+						return '/top/48h' + this.value;
+					}
+				}
+			})
+		}
+		templateData.categories.push( cat );
+	});
+	
+	var links = d.querySelectorAll('#foot > p a');
+	
+	links.forEach(function(self){
+		if( /coin/i.test(self.href) ) return;
+		var link = {
+			name : self.title || self.text,
+			url : self.href
+		}
+		templateData.links.push( link );
+	});
+	
+	var items = d.querySelectorAll('#searchResult tr:not(.header)');
+	
+	items.forEach(function(self){
+	
+		var columns = self.querySelectorAll('td'),
+			title = columns[1].querySelector('a'),
+			actions = columns[3].querySelectorAll('a');
+			
+		var item = {
+			type: parseInt(columns[0].querySelector('a').href.replace(/.*\//,'')),
+			name: title.innerText, //innerText
+			image: '',
+			uploaded: columns[2].innerText,
+			url: title.href,
+			cover: /cover/i.test(columns[3].innerHTML),
+			comments: /comment/i.test(columns[3].innerHTML),
+			size: columns[4].innerText,
+			imdb: '',
+			seeders: parseInt(columns[5].innerText),
+			leechers: parseInt(columns[6].innerText)
+		}
+		
+		/* var r = columns[3].innerHTML.match(/has.(.*).co/);
+		//querySeletor('img[title*="comment"]');
+		if(r.length > 0){
+			comments = parseInt(r[1]);
+		} */
+		
+		actions.forEach(function(e){
+			if( /magnet/.test(e.href) ){
+				item.magnet = e.href;
+			}else if( /torrents/.test(e.href) ){
+				item.torrent = e.href;
+			}else if( /trusted/.test(e.innerHTML) ){
+				item.trusted = true;
+			}else if( /vip/.test(e.innerHTML) ){
+				item.vip = true;
+			}
+		});
+		
+		templateData.items.push( item );
+		return;
+	});
+	
+	var item = document.querySelector('#detailsframe');
+	
+	if(item){
+	
+		var info = item.querySelector('.col1'),
+			info2 = item.querySelector('.col2'),
+			cover = item.querySelector('.torpicture img'),
+			actions = item.querySelectorAll('.download a');
+	
+		templateData.item = {
+			name: item.querySelectorAll('#title').innerText,
+			info : info.outerHTML + info2.outerHTML,
+			cover: cover && cover.outerHTML,
+			description: item.querySelector('.nfo').innerHTML.trim()
+		}
+		
+		actions.forEach(function(e){
+			if( /magnet/.test(e.href) ){
+				templateData.item.magnet = e.href;
+			}else if( /torrents/.test(e.href) ){
+				templateData.item.torrent = e.href;
+			}
+		});
+	}
+	
+	
+	
+	
+	
+	var templateURL = chrome.extension.getURL("template.html");
+	
+	console.log( templateData );
+	
+	d.body.innerHTML = "";
+	
+	get( templateURL, function(template) {
+		//var template = $(template).html();
+		
+		d.body.innerHTML = Mustache.render(template, templateData);
+		d.body.style.display = "block";
+		//$('body').append( Mustache.to_html(template, templateData) );
+		
+		//chrome.tabs.executeScript(null, {file: "tpb.expander.js"});
+		if(typeof(TPB) !== 'undefined')
+			TPB(d);
+	});
+	
+	
+	
+	
+	/* 
 	
 	var results = d.querySelectorAll('#searchResult tr:not(.header)');
 	
@@ -36,7 +217,7 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		api = 'http://imdbapi.org/?',
 		hotlink = 'http://lucasmonteverde.com/dev/hotlink.php?url=';
 		
-		
+	
 	th.innerHTML = "IMDB";
 	
 	results.forEach(function(e){
@@ -71,31 +252,34 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		var url = api + serialize(params);
 		
 		
-		get( url, function(data){
+		getJSON( url, function(data){
 			console.log( url, data );
 			
 			if(data && !data.error){
 				data.forEach(function(e){
 					var html = '<a href="' + e.imdb_url + '" target="_blank">' + (e.rating || 'imdb') + '</a>';
 					
-					html += e.poster ? ' | <a href="#" class="cov"><span><img src="' + hotlink + e.poster + '"></span></a>': '';
+					html += e.poster != '' ? ' | <a href="#" class="cov"><span><img src="' + hotlink + e.poster + '"></span></a>': '';
 					
 					imdb.innerHTML = html;
 				});
 			}
 		});
-	});
+	}); */
 	
-	function get(url, callback){
+	function get(url, callback, JSON){
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", url, true);
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState == 4) {
-				//console.log( xhr );
-				callback.apply(this, [ JSON.parse(xhr.responseText), xhr]);
+				callback.apply(this, [ JSON ? JSON.parse(xhr.responseText) : xhr.responseText, xhr]);
 			}
 		}
 		xhr.send();
+	}
+	
+	function getJSON(url, callback){
+		get(url, callback, true);
 	}
 	
 	function serialize(obj, prefix) {
@@ -114,13 +298,6 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		
 		//console.log( result );
 		return result ? result[1].replace(/\s|\.|\(|\)/ig,'+').trim() : '';
-	}
-
-	function destroy(obj){
-		if(obj){
-			obj.parentNode.removeChild(obj);
-			return true;
-		}else return false;
 	}
 
 }(document));

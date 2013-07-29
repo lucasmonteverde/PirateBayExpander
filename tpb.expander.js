@@ -21,9 +21,8 @@
 
 NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.forEach;
 
-(function(d){
-	
-	var links = d.querySelectorAll('.nfo a'),
+TPB = function(d){
+	var links = d.querySelectorAll('.info a'), //d.querySelectorAll('.nfo a')
 		container = d.createElement('div'),
 		defaultImage = /(http(|s):\/\/.*?(png|jpg|gif))/i,
 		hotlink = 'http://lucasmonteverde.com/dev/hotlink.php?url=';
@@ -62,7 +61,8 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		
 	});
 	
-	d.querySelectorAll('#content')[0].appendChild( container );
+	//d.querySelectorAll('#content')[0].appendChild( container );
+	d.querySelector('article').appendChild( container );
 	
 	function appendImage(url){
 		//console.log(url);
@@ -115,4 +115,5 @@ NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.
 		}else return false;
 	}
 
-}(document));
+}
+//window.TPB(d);

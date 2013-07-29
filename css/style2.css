@@ -15,7 +15,6 @@ html,button,input,select,textarea{color:#222}body{font-size:1em;line-height:1.4}
 html{overflow-y:scroll;}
 body{font-size:12px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;color:#5b5b5b;background-color:#ddd;}
 
-
 a{color:#5b5b5b;}
 a:hover{text-decoration:none;}
 
@@ -197,7 +196,7 @@ section{margin-left:320px;}
 
 	article section{margin:0;}
 	article .cover{float:left;width:215px;height:auto;min-height:318px;margin:20px;}
-	article .img{width:215px;height:auto;min-height:318px;background-color:#5b5b5b;}
+	article .img{width:215px;height:auto;background-color:#5b5b5b;}
 	article .img img{width:100%;height:auto;}
 	article .info{margin:0 20px 0 255px;}
 	article .info h2{margin-top:0;padding-top:20px;}
