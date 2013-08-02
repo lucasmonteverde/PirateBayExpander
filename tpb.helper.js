@@ -132,7 +132,17 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			size: columns[4].innerText,
 			imdb: '',
 			seeders: parseInt(columns[5].innerText),
-			leechers: parseInt(columns[6].innerText)
+			leechers: parseInt(columns[6].innerText),
+			category: function () {
+				var self = this;
+				console.log(self, templateData.categories);
+				_.each(templateData.categories,function(e){
+					_.each(e.subcategories,function(f){
+						if(f.value == self.type)
+							return f.name;
+					});
+				});
+			}
 		}
 		
 		/* var r = columns[3].innerHTML.match(/has.(.*).co/);
