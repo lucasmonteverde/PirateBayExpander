@@ -20,7 +20,7 @@
 		{
 			"matches": ["*://*.thepiratebay.sx/*"],
 			//"exclude_globs" : ["*://*.thepiratebay.sx/torrent/*"],
-			"js": ["mustache.min.js", "underscore.min.js", "tpb.helper.js"],
+			"js": ["mustache.min.js", "tpb.helper.js"],
 			"css": ["css/style2.css"],
 			"run_at": "document_end"
 		},

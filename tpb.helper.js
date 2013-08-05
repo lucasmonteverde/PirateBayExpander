@@ -20,6 +20,7 @@
 //console.log = function() {}
 
 NodeList.prototype.forEach = HTMLCollection.prototype.forEach = Array.prototype.forEach;
+NodeList.prototype.map = HTMLCollection.prototype.map = Array.prototype.map;
 
 HTMLElement.prototype.remove = function(){
 	try{
@@ -51,6 +52,18 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 				});
 			}
     }); */
+	
+	function findySubByValue(categories, value){
+		//templateData.categories
+		for (var i = 0, len = categories.length; i < len; i++) {
+			for (var j = 0, jlen = categories[i].subcategories.length; j < jlen; j++) {
+				if(categories[i].subcategories[j].value == self.type){
+					return categories[i].subcategories[j];
+				}
+			}
+		}
+		return undefined;
+	}
 	
 	var templateData = {
 		categories : [],
@@ -86,7 +99,7 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			link2:  function() {
 				return '/top/48h' + this.value;
 			},
-			subcategories: _.map(self.children,function(self, index){
+			subcategories: self.children.map(function(self, index){
 				return {
 					name: self.text,
 					value: self.value,
@@ -97,7 +110,7 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 						return '/top/48h' + this.value;
 					}
 				}
-			})
+			}),
 		}
 		templateData.categories.push( cat );
 	});
@@ -135,13 +148,13 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			leechers: parseInt(columns[6].innerText),
 			category: function () {
 				var self = this;
-				console.log(self, templateData.categories);
-				_.each(templateData.categories,function(e){
-					_.each(e.subcategories,function(f){
-						if(f.value == self.type)
-							return f.name;
-					});
-				});
+				for (var i = 0, len = templateData.categories.length; i < len; i++) {
+					for (var j = 0, jlen = templateData.categories[i].subcategories.length; j < jlen; j++) {
+						if(templateData.categories[i].subcategories[j].value == self.type){
+							return templateData.categories[i].subcategories[j];
+						}
+					}
+				}
 			}
 		}
 		
