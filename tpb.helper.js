@@ -53,23 +53,38 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			}
     }); */
 	
-	function findySubByValue(categories, value){
-		//templateData.categories
-		for (var i = 0, len = categories.length; i < len; i++) {
-			for (var j = 0, jlen = categories[i].subcategories.length; j < jlen; j++) {
-				if(categories[i].subcategories[j].value == self.type){
-					return categories[i].subcategories[j];
+	function findSubcategoryByValue(value){
+		for (var i = 0, len = templateData.categories.length; i < len; i++) {
+			for (var j = 0, jlen = templateData.categories[i].subcategories.length; j < jlen; j++) {
+				if(templateData.categories[i].subcategories[j].value == this.type){
+					return templateData.categories[i].subcategories[j];
 				}
 			}
 		}
-		return undefined;
+		return;
 	}
+		
+	var Item = function() {
+	
+		this.category = function(value){
+			for (var i = 0, len = templateData.categories.length; i < len; i++) {
+				for (var j = 0, jlen = templateData.categories[i].subcategories.length; j < jlen; j++) {
+					if(templateData.categories[i].subcategories[j].value == this.type){
+						return templateData.categories[i].subcategories[j];
+					}
+				}
+			}
+			return;
+		}
+	}
+	
 	
 	var templateData = {
 		categories : [],
 		links: [],
 		items: [],
 		searchform: '',
+		
 	};
 	
 	try{
@@ -134,6 +149,7 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			title = columns[1].querySelector('a'),
 			actions = columns[3].querySelectorAll('a');
 			
+			
 		var item = {
 			type: parseInt(columns[0].querySelector('a').href.replace(/.*\//,'')),
 			name: title.innerText, //innerText
@@ -145,7 +161,8 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			size: columns[4].innerText,
 			imdb: '',
 			seeders: parseInt(columns[5].innerText),
-			leechers: parseInt(columns[6].innerText),
+			leechers: parseInt(columns[6].innerText)
+			/* 
 			category: function () {
 				var self = this;
 				for (var i = 0, len = templateData.categories.length; i < len; i++) {
@@ -155,8 +172,8 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 						}
 					}
 				}
-			}
-		}
+			} */
+		};
 		
 		/* var r = columns[3].innerHTML.match(/has.(.*).co/);
 		//querySeletor('img[title*="comment"]');
@@ -176,8 +193,16 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 			}
 		});
 		
+		//Item.prototype = item;
+		
+		console.log( item );
+		
+		//item.category = findSubcategoryByValue(item.type);
+		item.category = findSubcategoryByValue.call(item);
+		
+		//Object.defineProperty(item, "category", findSubcategoryByValue(item.type));
+		
 		templateData.items.push( item );
-		return;
 	});
 	
 	var item = document.querySelector('#detailsframe');
