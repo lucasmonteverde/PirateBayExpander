@@ -95,32 +95,35 @@
 							<a href="#" class="cov"><span><img src="{{image}}" alt="" /></span></a>
 						{{/image}}
 						</td>
-						<td><a href="{{url}}" class="torrent">{{name}}</a></td>
+						<td>
+							<a href="{{magnet}}" class="mag" title="Magnet">magnet</a>
+							<a href="{{url}}" class="torrent" title="{{name}}">{{name}}</a>
+						</td>
 						<td><b>{{uploaded}}</b></td>
 						<td>
-							<a href="{{magnet}}" class="mag">magnet</a>
+							
 							
 							{{#cover}}
-								<span class="scr">screen</span>
+								<span class="scr" title="Screen">screen</span>
 							{{/cover}}
 							
 							{{#comments}}
-								<span class="comments">comments</span>
+								<span class="com" title="Comments">comments</span>
 							{{/comments}}
 							
 							{{#torrent}}
-								<a href="{{torrent}}" class="dow">download</a>
+								<a href="{{torrent}}" class="dow" title="Download">download</a>
 							{{/torrent}}
 							
 							{{#vip}}
-								<a href="{{vip}}" class="vip">vip</a>
+								<a href="{{vip}}" class="vip" title="Vip">vip</a>
 							{{/vip}}
 							
 							{{#trusted}}
-								<a href="{{trusted}}" class="trusted">vip</a>
+								<a href="{{trusted}}" class="tru">trusted</a>
 							{{/trusted}}
 						</td>
-						<td><span class="rat">{{imdb}}</span></td>
+						<td><span class="rat" title="{{imdb}}">{{imdb}}</span></td>
 						<td>{{size}}</td>
 						<td>{{seeders}}</td>
 						<td>{{leechers}}</td>
