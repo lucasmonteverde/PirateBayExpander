@@ -28,8 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="i-"] {
 */
-.i-images, .i-star, .i-cog, .i-refresh, .i-repeat, .i-download, .i-warning-sign, .i-asterisk, .i-comments, .i-thumbs-up, .i-thumbs-down, .i-link, .i-search, .i-ticket, .i-magnet, .i-ellipsis-vertical, .i-gamepad, .i-music, .i-save, .i-apple, .i-windows, .i-android, .i-linux, .i-youtube-play, .i-film, .i-warning, .i-book, .i-upload, .i-picture, .i-ok-circle, .i-html5, .i-css3, .i-ellipsis-horizontal, .i-home {
-	font-size:14px;
+.i-images, .i-star, .i-cog, .i-refresh, .i-repeat, .i-download, .i-warning-sign, .i-asterisk, .i-comments, .i-thumbs-up, .i-thumbs-down, .i-link, .i-search, .i-ticket, .i-magnet, .i-ellipsis-vertical, .i-gamepad, .i-music, .i-save, .i-apple, .i-windows, .i-android, .i-linux, .i-youtube-play, .i-film, .i-warning, .i-book, .i-upload, .i-picture, .i-ok-circle, .i-html5, .i-css3, .i-ellipsis-horizontal, .i-home, .i-ok, .i-plus, .i-minus, .i-exclamation-sign {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -38,6 +37,7 @@ you can use the generic selector below, but it's slower:
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+	font-size:14px;
 	text-decoration:none!important;
 }
 .i-images:before {
@@ -141,4 +141,16 @@ you can use the generic selector below, but it's slower:
 }
 .i-home:before {
 	content: "\f015";
+}
+.i-ok:before {
+	content: "\f00c";
+}
+.i-plus:before {
+	content: "\f067";
+}
+.i-minus:before {
+	content: "\f068";
+}
+.i-exclamation-sign:before {
+	content: "\f06a";
 }

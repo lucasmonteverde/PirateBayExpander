@@ -82,7 +82,7 @@ article{height:100%;overflow-y:scroll;}
 				td a:hover{text-decoration:underline;}
 
 				.i{width:14px;}
-				.t{width:60%;}
+				.t{width:50%;}
 
 			tr.title .t{font-size:1.5em;font-weight:bold;}
 			
@@ -106,7 +106,7 @@ article{height:100%;overflow-y:scroll;}
 					.i-download{color:#7ac428;}
 					.i-ticket{color:#fdba06;}
 					.i-comments{color:;}
-					.i-ok-circle{color:#1f9f27;}
+					.i-ok{color:#1f9f27;}
 
 
 
