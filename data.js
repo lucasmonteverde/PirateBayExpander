@@ -63,6 +63,11 @@ var data = [
 		"target" :'244pix.com/images/$1'
 	},
 	{
+		"regExp" :/imgboxxx\.com\/viewer.php\?file=(.*\S)/i,
+		"target" :'imgboxxx.com/images/$1',
+		"hotlink" : true
+	},
+	{
 		"regExp" :/imagecurl\.org\/viewer.php\?file=(.*\S)/i,
 		"target" :'imagecurl.org/images/$1',
 		"hotlink" : true

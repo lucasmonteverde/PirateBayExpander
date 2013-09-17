@@ -40,6 +40,9 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 	
 	d.querySelectorAll('link[rel="stylesheet"], style', 'head').remove();
 	
+	
+	//setCookie('lw','s') //single view
+	
 	/* $(document).on('click', '#btnAdSearch',function(){
 		$(this).data('clicked',!$(this).data('clicked'));
 			if ($(this).data('clicked')){
@@ -84,13 +87,16 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 		links: [],
 		items: [],
 		searchform: '',
-		
+		page: 0,
 	};
 	
 	try{
 		templateData.footer = document.querySelector('#footer').innerHTML;
 	
 		templateData.title = document.querySelector('h2').innerText;
+		
+		var segments = location.pathname.split('/');
+		templateData.page = segments[3];
 	
 	}catch(e){
 		console.error('QuerySelector error:', e);
@@ -145,8 +151,11 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 	
 	items.forEach(function(self){
 	
-		var columns = self.querySelectorAll('td'),
-			title = columns[1].querySelector('a'),
+		var columns = self.querySelectorAll('td');
+		
+		if( columns.length < 6 ) return;
+		
+		var title = columns[1].querySelector('a'),
 			actions = columns[3].querySelectorAll('a');
 			
 			
@@ -236,8 +245,6 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 	
 	var templateURL = chrome.extension.getURL("template.html");
 	
-	console.log( templateData );
-	
 	d.body.innerHTML = "";
 	
 	get( templateURL, function(template) {
@@ -250,9 +257,38 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 		//chrome.tabs.executeScript(null, {file: "tpb.expander.js"});
 		if(typeof(TPB) !== 'undefined')
 			TPB(d);
+			
+		//setup();
 	});
 	
 	
+	
+	function setup(){
+	
+		var section = document.querySelector('section');
+	
+		window.onscroll = function() {
+			var oH = dsection.offsetHeight;
+			var oH = document.body.offsetHeight; //section.scrollHeight; //offsetHeight ||clientHeight
+			var sT = document.body.scrollTop;
+	  
+			if( document.documentElement.clientHeight + sT >= oH  ){
+				
+				
+				get( getNextPage(), function(){
+				
+				})
+			}
+		}
+	}
+	
+	function getNextPage(){
+	
+		var segments = location.pathname.split('/');
+		segments[3] += 1;
+	
+		return segments.join();
+	}
 	
 	
 	/* 

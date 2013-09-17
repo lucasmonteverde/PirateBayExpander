@@ -65,7 +65,7 @@ TPB = function(d){
 	d.querySelector('article').appendChild( container );
 	
 	function appendImage(url){
-		//console.log(url);
+		console.log('appendImage', url);
 		
 		var image = document.createElement('img');
 		image.src = encodeURI(url);
@@ -78,9 +78,10 @@ TPB = function(d){
 	
 	function load(url, item){
 		get(url, function(data){
+			console.log( item.target.exec, data )
 			var result = item.target.exec(data);
 			
-			appendImage( 'http://' + result[1] );
+			result && appendImage( 'http://' + result[1] );
 		});
 	}
 
@@ -98,7 +99,8 @@ TPB = function(d){
 	
 	function get(url, callback){
 		var xhr = new XMLHttpRequest();
-		xhr.open("GET", url, true);
+		//url = url.replace(/^http:/, location.protocol);
+		xhr.open("GET",  url, true);
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState == 4) {
 				console.log( xhr );
