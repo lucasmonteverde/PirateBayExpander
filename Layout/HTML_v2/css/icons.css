@@ -1,17 +1,17 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-family: 'i';
+	src:url('../fonts/i.eot');
+	src:url('../fonts/i.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/i.woff') format('woff'),
+		url('../fonts/i.ttf') format('truetype'),
+		url('../fonts/i.svg#i') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'icomoon';
+	font-family: 'i';
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
@@ -28,8 +28,8 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="i-"] {
 */
-.i-images, .i-star, .i-cog, .i-refresh, .i-repeat, .i-download, .i-warning-sign, .i-asterisk, .i-comments, .i-thumbs-up, .i-thumbs-down, .i-link, .i-search, .i-ticket, .i-magnet, .i-ellipsis-vertical, .i-gamepad, .i-music, .i-save, .i-apple, .i-windows, .i-android, .i-linux, .i-youtube-play, .i-film, .i-warning, .i-book, .i-upload, .i-picture, .i-ok-circle, .i-html5, .i-css3, .i-ellipsis-horizontal, .i-home, .i-ok, .i-plus, .i-minus, .i-exclamation-sign {
-	font-family: 'icomoon';
+.i-images, .i-star, .i-cog, .i-refresh, .i-repeat, .i-download, .i-warning-sign, .i-asterisk, .i-comments, .i-thumbs-up, .i-thumbs-down, .i-link, .i-search, .i-ticket, .i-magnet, .i-ellipsis-vertical, .i-gamepad, .i-music, .i-save, .i-apple, .i-windows, .i-android, .i-linux, .i-youtube-play, .i-film, .i-warning, .i-book, .i-upload, .i-picture, .i-ok-circle, .i-html5, .i-css3, .i-ellipsis-horizontal, .i-home, .i-ok, .i-plus, .i-minus, .i-exclamation-sign, .i-th-list, .i-angle-left, .i-angle-right {
+	font-family: 'i';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -37,8 +37,6 @@ you can use the generic selector below, but it's slower:
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	font-size:14px;
-	text-decoration:none!important;
 }
 .i-images:before {
 	content: "\e00b";
@@ -153,4 +151,13 @@ you can use the generic selector below, but it's slower:
 }
 .i-exclamation-sign:before {
 	content: "\f06a";
+}
+.i-th-list:before {
+	content: "\f00b";
+}
+.i-angle-left:before {
+	content: "\f104";
+}
+.i-angle-right:before {
+	content: "\f105";
 }
