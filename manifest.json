@@ -12,13 +12,13 @@
   
 	"content_scripts": [
 		{
-			"matches": ["*://*.thepiratebay.sx/torrent/*"],
+			"matches": ["*://*.thepiratebay.ac/torrent/*"],
 			"js": ["data.js", "tpb.expander.js"],
 			"css": ["css/style.css"],
 			"run_at": "document_end"
 		},
 		{
-			"matches": ["*://*.thepiratebay.sx/*"],
+			"matches": ["*://*.thepiratebay.ac/*"],
 			//"exclude_globs" : ["*://*.thepiratebay.sx/torrent/*"],
 			"js": ["mustache.min.js", "tpb.helper.js"],
 			"css": ["css/style2.css"],
@@ -26,7 +26,7 @@
 		},
 		
 		{
-			"matches": ["*://*.thepiratebay.sx/*"],
+			"matches": ["*://*.thepiratebay.ac/*"],
 			//"exclude_globs" : ["*://*.thepiratebay.sx/torrent/*"],
 			"css": ["css/style3.css"],
 			"run_at": "document_start"

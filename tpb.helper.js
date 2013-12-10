@@ -37,10 +37,47 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 };
 
 (function(d){
+
+	var $ = function(e){
+		
+		var el = e;
+		
+		if(typeof e === "string"){
+			el = window[e];
+		}
+		
+		if(!el || el.length === 0){
+			el = document.querySelector(e);
+		}
+		//console.log(el);
+
+		el.bind = function(event, func){
+			this.addEventListener(event, func);
+		}
+		
+		el.unbind = function(event, func){
+			this.removeEventListener(event, func);
+		}
+		
+		el.hide = function(){
+			this.style.display = "none";
+		}
+		
+		el.show = function(){
+			this.style.display = "block";
+		}
+		
+		el.toggle = function(){
+			this.style.display == "none" ? this.show() : this.hide();
+		}
+		
+		return el;
+	}
 	
 	d.querySelectorAll('link[rel="stylesheet"], style', 'head').remove();
 	
-	
+	//TODO: run on setup
+	document.cookie = 'lw=s;path=/;expires=Fri, 05 Dec 2014 02:05:10 GMT';
 	//setCookie('lw','s') //single view
 	
 	/* $(document).on('click', '#btnAdSearch',function(){
@@ -91,9 +128,11 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 	};
 	
 	try{
-		templateData.footer = document.querySelector('#footer').innerHTML;
+		templateData.footer = d.querySelector('#footer').innerHTML;
 	
-		templateData.title = document.querySelector('h2').innerText;
+		templateData.title = d.querySelector('h2').innerText;
+		
+		templateData.search = d.querySelector('input[name="q"]').value;
 		
 		var segments = location.pathname.split('/');
 		templateData.page = segments[3];
@@ -204,7 +243,7 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 		
 		//Item.prototype = item;
 		
-		console.log( item );
+		//console.log( item );
 		
 		//item.category = findSubcategoryByValue(item.type);
 		item.category = findSubcategoryByValue.call(item);
@@ -214,7 +253,7 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 		templateData.items.push( item );
 	});
 	
-	var item = document.querySelector('#detailsframe');
+	var item = d.querySelector('#detailsframe');
 	
 	if(item){
 	
@@ -247,12 +286,19 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 	
 	d.body.innerHTML = "";
 	
+	//console.log(templateData);
+	
 	get( templateURL, function(template) {
 		//var template = $(template).html();
 		
 		d.body.innerHTML = Mustache.render(template, templateData);
 		d.body.style.display = "block";
 		//$('body').append( Mustache.to_html(template, templateData) );
+		
+		
+		$('#btnAdSearch').bind('click', function(){
+			$('#boxAdSearch').toggle();
+		});
 		
 		//chrome.tabs.executeScript(null, {file: "tpb.expander.js"});
 		if(typeof(TPB) !== 'undefined')
@@ -265,14 +311,14 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function(){
 	
 	function setup(){
 	
-		var section = document.querySelector('section');
+		var section = d.querySelector('section');
 	
 		window.onscroll = function() {
 			var oH = dsection.offsetHeight;
-			var oH = document.body.offsetHeight; //section.scrollHeight; //offsetHeight ||clientHeight
-			var sT = document.body.scrollTop;
+			var oH = d.body.offsetHeight; //section.scrollHeight; //offsetHeight ||clientHeight
+			var sT = d.body.scrollTop;
 	  
-			if( document.documentElement.clientHeight + sT >= oH  ){
+			if( d.documentElement.clientHeight + sT >= oH  ){
 				
 				
 				get( getNextPage(), function(){

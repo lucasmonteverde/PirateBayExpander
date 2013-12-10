@@ -6,7 +6,7 @@
 			<form id="q" action="/s/">
 				<fieldset>
 					<div>
-						<input type="search" name="q" value="" placeholder="Search here..." />
+						<input type="search" name="q" value="{{search}}" placeholder="Search here..." />
 						<div class="btn search">
 							<input type="submit" value="Search" />
 						</div>
@@ -14,7 +14,7 @@
 					
 					<div>
 						<a href="#" id="btnAdSearch" title="Advanced search">Advanced search</a>
-						<div id="boxAdSearch">
+						<div id="boxAdSearch" style="display:none;">
 							<label title="All"><input type="checkbox" class="custom" checked>All</label>
 							
 							{{#categories}}
