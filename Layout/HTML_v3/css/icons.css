@@ -1,0 +1,163 @@
+@font-face {
+	font-family: 'i';
+	src:url('../fonts/i.eot');
+	src:url('../fonts/i.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/i.woff') format('woff'),
+		url('../fonts/i.ttf') format('truetype'),
+		url('../fonts/i.svg#i') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'i';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="i-"] {
+*/
+.i-images, .i-star, .i-cog, .i-refresh, .i-repeat, .i-download, .i-warning-sign, .i-asterisk, .i-comments, .i-thumbs-up, .i-thumbs-down, .i-link, .i-search, .i-ticket, .i-magnet, .i-ellipsis-vertical, .i-gamepad, .i-music, .i-save, .i-apple, .i-windows, .i-android, .i-linux, .i-youtube-play, .i-film, .i-warning, .i-book, .i-upload, .i-picture, .i-ok-circle, .i-html5, .i-css3, .i-ellipsis-horizontal, .i-home, .i-ok, .i-plus, .i-minus, .i-exclamation-sign, .i-th-list, .i-angle-left, .i-angle-right {
+	font-family: 'i';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.i-images:before {
+	content: "\e00b";
+}
+.i-star:before {
+	content: "\f005";
+}
+.i-cog:before {
+	content: "\f013";
+}
+.i-refresh:before {
+	content: "\f021";
+}
+.i-repeat:before {
+	content: "\f01e";
+}
+.i-download:before {
+	content: "\f01a";
+}
+.i-warning-sign:before {
+	content: "\f071";
+}
+.i-asterisk:before {
+	content: "\f069";
+}
+.i-comments:before {
+	content: "\f086";
+}
+.i-thumbs-up:before {
+	content: "\f087";
+}
+.i-thumbs-down:before {
+	content: "\f088";
+}
+.i-link:before {
+	content: "\f0c1";
+}
+.i-search:before {
+	content: "\f002";
+}
+.i-ticket:before {
+	content: "\f145";
+}
+.i-magnet:before {
+	content: "\f076";
+}
+.i-ellipsis-vertical:before {
+	content: "\f142";
+}
+.i-gamepad:before {
+	content: "\f11b";
+}
+.i-music:before {
+	content: "\f001";
+}
+.i-save:before {
+	content: "\f0c7";
+}
+.i-apple:before {
+	content: "\f179";
+}
+.i-windows:before {
+	content: "\f17a";
+}
+.i-android:before {
+	content: "\f17b";
+}
+.i-linux:before {
+	content: "\f17c";
+}
+.i-youtube-play:before {
+	content: "\f16a";
+}
+.i-film:before {
+	content: "\f008";
+}
+.i-warning:before {
+	content: "\e005";
+}
+.i-book:before {
+	content: "\e004";
+}
+.i-upload:before {
+	content: "\f01b";
+}
+.i-picture:before {
+	content: "\f03e";
+}
+.i-ok-circle:before {
+	content: "\f05d";
+}
+.i-html5:before {
+	content: "\f13b";
+}
+.i-css3:before {
+	content: "\f13c";
+}
+.i-ellipsis-horizontal:before {
+	content: "\f141";
+}
+.i-home:before {
+	content: "\f015";
+}
+.i-ok:before {
+	content: "\f00c";
+}
+.i-plus:before {
+	content: "\f067";
+}
+.i-minus:before {
+	content: "\f068";
+}
+.i-exclamation-sign:before {
+	content: "\f06a";
+}
+.i-th-list:before {
+	content: "\f00b";
+}
+.i-angle-left:before {
+	content: "\f104";
+}
+.i-angle-right:before {
+	content: "\f105";
+}

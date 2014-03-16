@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>TPB | Expander</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="By Monteverde and SG Web">
+
+		<link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/icons.css">
+	</head>
+	<body>
+        <input type="checkbox" id="nav-check" />
+        <main>
+            <aside>
+            	<div class="action"><label for="nav-check">☰</label></div>
+                <header>
+                    <h1><a href="/login" title="The Pirate Bay"><img src="img/logo.jpg" alt="The Pirate Bay" /></a></h1>
+                    
+                    <form action="">
+                        <fieldset>
+                            <div>
+                                <input type="search" value="" placeholder="Search here..." />
+                                <input type="submit" value="Search" />
+                            </div>
+                            
+                            <div>
+                                <a href="#" id="btnAdSearch" title="Advanced search">Advanced search</a>
+                                <div id="boxAdSearch">
+                                    <label title="All"><input type="checkbox" checked>All</label>
+                                    <label title="Audio"><input name="audio" type="checkbox" >Audio</label>
+                                    <label title="Video"><input name="video" type="checkbox" >Video</label>
+                                    <label title="Applications"><input name="apps" type="checkbox" >Applications</label>
+                                    <label title="Games"><input name="games" type="checkbox" >Games</label>
+                                    <label title="Porn"><input name="porn" type="checkbox" >Porn</label>
+                                    <label title="Other"><input name="other" type="checkbox" >Other</label>
+                        
+                                    <select name="category" class="custom">
+                                        <option value="0">All</option>
+                                        <optgroup label="Audio">
+                                            <option value="101">Music</option>
+                                            <option value="102">Audio books</option>
+                                            <option value="103">Sound clips</option>
+                                            <option value="104">FLAC</option>
+                                            <option value="199">Other</option>
+                                        </optgroup>
+                                        <optgroup label="Video">
+                                            <option value="201">Movies</option>
+                                            <option value="202">Movies DVDR</option>
+                                            <option value="203">Music videos</option>
+                                            <option value="204">Movie clips</option>
+                                            <option value="205">TV shows</option>
+                                            <option value="206">Handheld</option>
+                                            <option value="207">HD - Movies</option>
+                                            <option value="208">HD - TV shows</option>
+                                            <option value="209">3D</option>
+                                            <option value="299">Other</option>
+                                        </optgroup>
+                                        <optgroup label="Applications">
+                                            <option value="301">Windows</option>
+                                            <option value="302">Mac</option>
+                                            <option value="303">UNIX</option>
+                                            <option value="304">Handheld</option>
+                                            <option value="305">IOS (iPad/iPhone)</option>
+                                            <option value="306">Android</option>
+                                            <option value="399">Other OS</option>
+                                        </optgroup>
+                                        <optgroup label="Games">
+                                            <option value="401">PC</option>
+                                            <option value="402">Mac</option>
+                                            <option value="403">PSx</option>
+                                            <option value="404">XBOX360</option>
+                                            <option value="405">Wii</option>
+                                            <option value="406">Handheld</option>
+                                            <option value="407">IOS (iPad/iPhone)</option>
+                                            <option value="408">Android</option>
+                                            <option value="499">Other</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="601">E-books</option>
+                                            <option value="602">Comics</option>
+                                            <option value="603">Pictures</option>
+                                            <option value="604">Covers</option>
+                                            <option value="605">Physibles</option>
+                                            <option value="699">Other</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </header>
+
+                <section class="accordion">
+                    <div>
+                        <input id="ac-1" name="menu" type="radio" checked="checked" />
+                        <label for="ac-1">Menu</label>
+                        <div>
+                            <div>
+
+                                <h2><a href="#">Total top 100</a> (<a href="#">48h</a>)</h2>
+
+                                <h3><a href="#">Audio</a> (<a href="#">48h</a>)</h3>
+                                <p><a href="#">Music</a>, <a href="#">Audio books</a>, <a href="#">Sound clips</a>, <a href="#">FLAC</a>, <a href="#">Other</a></p>
+                                
+                                <h3><a href="#">Video</a> (<a href="#">48h</a>)</h3>
+                                <p><a href="#">Movies</a>, <a href="#">Movies DVDR</a>, <a href="#">Music videos</a>, <a href="#">Movie clips</a>, <a href="#">TV shows</a>, <a href="#">Handheld</a>, <a href="#">HD - Movies</a>, <a href="#">HD - TV shows</a>, <a href="#">3D</a>, <a href="#">Other</a></p>
+                                
+                                <h3><a href="#">Applications</a> (<a href="#">48h</a>)</h3>
+                                <p><a href="#">Windows</a>, <a href="#">Mac</a>, <a href="#">UNIX</a>, <a href="#">Handheld</a>, <a href="#">IOS (iPad/iPhone)</a>, <a href="#">Android</a>, <a href="#">Other OS</a></p>
+                                
+                                <h3><a href="#">Games</a> (<a href="#">48h</a>)</h3>
+                                <p><a href="#">PC</a>, <a href="#">Mac</a>, <a href="#">PSx</a>, <a href="#">XBOX360</a>, <a href="#">Wii</a>, <a href="#">Handheld</a>, <a href="#">IOS (iPad/iPhone)</a>, <a href="#">Android</a>, <a href="#">Other</a></p>
+                                
+                                <h3><a href="#">Porn</a> (<a href="#">48h</a>)</h3>
+                                <p><a href="#">Movies</a>, <a href="#">Movies DVDR</a>, <a href="#">Pictures</a>, <a href="#">Games</a>, <a href="#">HD - Movies</a>, <a href="#">Movie clips</a>, <a href="#">Other</a></p>
+                                
+                                <h3><a href="#">Other</a> (<a href="#">48h</a>)</h3>
+                                <p><a href="#">E-books</a>, <a href="#">Comics</a>, <a href="#">Pictures</a>, <a href="#">Covers</a>, <a href="#">Physibles</a>, <a href="#">Other</a></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input id="ac-2" name="menu" type="radio" />
+                        <label for="ac-2">About</label>
+                        <div>
+                            <div>
+                                <h2>TPB Expander</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sunt, est ipsum quae itaque eaque odit et nihil saepe nemo voluptas molestias dolores eveniet. Soluta assumenda impedit possimus nesciunt fugiat.</p>
+                                
+                                <p>Bitcoin: <strong>qazwsxedcrfv</strong></p>
+
+                                <p>Versão 1.0 (beta)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            <article>
+                Content
+            </article>
+        </main>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/init.js"></script>
+	</body>
+</html>
