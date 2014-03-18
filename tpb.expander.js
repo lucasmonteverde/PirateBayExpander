@@ -81,7 +81,7 @@ TPB = function(d){
 			console.log( item.target.exec, data )
 			var result = item.target.exec(data);
 			
-			result && appendImage( 'http://' + result[1] );
+			result && appendImage( ( item.hotlink ? hotlink : '') + 'http://' + result[1]  );
 		});
 	}
 

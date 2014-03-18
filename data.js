@@ -1,22 +1,7 @@
 var data = [
 	{
-		"regExp" :/xxxhost\.me\/viewer.php\?file=(.*\S)/i,
-		"target" :'xxxhost.me/files/$1',
-		"hotlink" : true
-	},
-	{
-		"regExp" :/xxxces\.com\/viewer.php\?file=(.*\S)/i,
-		"target" :'xxxces.com/files/$1',
-		"hotlink" : true
-	},
-	{
 		"regExp" :/euro-pic\.eu\/share-(.*)\.html/i,
 		"target" :'euro-pic.eu/image.php?id=$1'
-	},
-	{
-		"regExp" :/imgnip\.com\/viewer\.php\?file=(.*\S)/i,
-		"target" :'imgnip.com/images/$1',
-		"hotlink" : true
 	},
 	{
 		"regExp" :/picbank\.asia\/viewer\.php\?file=(.*\S)/i,
@@ -63,6 +48,21 @@ var data = [
 		"target" :'244pix.com/images/$1'
 	},
 	{
+		"regExp" :/xxxhost\.me\/viewer.php\?file=(.*\S)/i,
+		"target" :'xxxhost.me/files/$1',
+		"hotlink" : true
+	},
+	{
+		"regExp" :/xxxces\.com\/viewer.php\?file=(.*\S)/i,
+		"target" :'xxxces.com/files/$1',
+		"hotlink" : true
+	},
+	{
+		"regExp" :/imgnip\.com\/viewer\.php\?file=(.*\S)/i,
+		"target" :'imgnip.com/images/$1',
+		"hotlink" : true
+	},
+	{
 		"regExp" :/imgboxxx\.com\/viewer.php\?file=(.*\S)/i,
 		"target" :'imgboxxx.com/images/$1',
 		"hotlink" : true
@@ -72,6 +72,17 @@ var data = [
 		"target" :'imagecurl.org/images/$1',
 		"hotlink" : true
 	},
+	{
+		"regExp" :/imghoney\.com\/viewer.php\?file=(.*\S)/i,
+		"target" :'imghoney.com/images/$1',
+		"hotlink" : true
+	},
+	/* {
+		"regExp" :/imagesnake\.org\/show\/(.*\S)/i,
+		"target" :/(imagesnake\.org\/tn\/.*?)"/i,
+		"load" : true,
+		"hotlink" : true
+	}, */
 	{
 		"regExp" :/bayimg\.com\/(.*\S)/i,
 		"target" :/(image\.bayimg\.com\/.*?)"/i,
