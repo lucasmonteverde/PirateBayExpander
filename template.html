@@ -71,38 +71,37 @@
 						<th colspan="100%">{{title}}</th>
 					</tr>
 					<tr>
-						<th><a href="#">Type</a></th>
+						<th>{{{header.type}}}</th>
+						<!--th>&nbsp;</td-->
+						<th>{{{header.name}}}</th>
+						<th>{{{header.uploaded}}}</th>
 						<th>&nbsp;</td>
-						<th><a href="#">Name</a></th>
-						<th><a href="#">Uploaded</a></th>
-						<th>&nbsp;</td>
-						<th><a href="#">Ratings</a></th>
-						<th><a href="#">Size</a></th>
-						<th><a href="#">Se</a></th>
-						<th><a href="#">Le</a></th>
+						<!--th><a href="#">Ratings</a></th-->
+						<th>{{{header.size}}}</th>
+						<th>{{{header.se}}}</th>
+						<th>{{{header.le}}}</th>
 					</tr>
 				</thead>
 				<tbody>
 					{{#items}}
-					<tr>
+					<tr class="{{visited}}">
 						<td>
-							{{#category}}
+							{{{category}}}
+							<!-- {{#category}}
 								<a href="{{link}}">{{name}}</a>
-							{{/category}}
+							{{/category}} -->
 						</td>
-						<td>
 						{{#image}}
-							<a href="#" class="cov"><span><img src="{{image}}" alt="" /></span></a>
+							<td>
+								<a href="#" class="cov"><span><img src="{{image}}" alt="" /></span></a>
+							</td>
 						{{/image}}
-						</td>
 						<td>
 							<a href="{{magnet}}" class="mag" title="Magnet">magnet</a>
 							<a href="{{url}}" class="torrent" title="{{name}}">{{name}}</a>
 						</td>
 						<td><b>{{uploaded}}</b></td>
 						<td>
-							
-							
 							{{#cover}}
 								<span class="scr" title="Screen">screen</span>
 							{{/cover}}
@@ -123,7 +122,7 @@
 								<a href="{{trusted}}" class="tru">trusted</a>
 							{{/trusted}}
 						</td>
-						<td><span class="rat" title="{{imdb}}">{{imdb}}</span></td>
+						<!--td><span class="rat" title="{{imdb}}">{{imdb}}</span></td-->
 						<td>{{size}}</td>
 						<td>{{seeders}}</td>
 						<td>{{leechers}}</td>

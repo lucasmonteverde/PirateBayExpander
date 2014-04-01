@@ -1,0 +1,45 @@
+{{#items}}
+	<tr class="{{visited}}">
+		<td>
+			{{{category}}}
+			<!-- {{#category}}
+				<a href="{{link}}">{{name}}</a>
+			{{/category}} -->
+		</td>
+		{{#image}}
+			<td>
+				<a href="#" class="cov"><span><img src="{{image}}" alt="" /></span></a>
+			</td>
+		{{/image}}
+		<td>
+			<a href="{{magnet}}" class="mag" title="Magnet">magnet</a>
+			<a href="{{url}}" class="torrent" title="{{name}}">{{name}}</a>
+		</td>
+		<td><b>{{uploaded}}</b></td>
+		<td>
+			{{#cover}}
+				<span class="scr" title="Screen">screen</span>
+			{{/cover}}
+			
+			{{#comments}}
+				<span class="com" title="Comments">comments</span>
+			{{/comments}}
+			
+			{{#torrent}}
+				<a href="{{torrent}}" class="dow" title="Download">download</a>
+			{{/torrent}}
+			
+			{{#vip}}
+				<a href="{{vip}}" class="vip" title="Vip">vip</a>
+			{{/vip}}
+			
+			{{#trusted}}
+				<a href="{{trusted}}" class="tru">trusted</a>
+			{{/trusted}}
+		</td>
+		<!--td><span class="rat" title="{{imdb}}">{{imdb}}</span></td-->
+		<td>{{size}}</td>
+		<td>{{seeders}}</td>
+		<td>{{leechers}}</td>
+	</tr>
+{{/items}}

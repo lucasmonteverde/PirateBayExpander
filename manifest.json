@@ -35,6 +35,7 @@
 	
 	"web_accessible_resources": [
 		"img/ico/cov.gif",
-		"template.html"
+		"template.html",
+		"items.html"
 	]
 }

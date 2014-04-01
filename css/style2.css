@@ -154,6 +154,7 @@ section{margin-left:320px;}
 		thead th,		
 		tfoot td{padding:5px;}
 		thead tr:first-child{font-size:14px;}
+		.viewswitch{display:none}
 		
 		thead tr,		
 		tfoot tr,
